@@ -23,14 +23,21 @@ vector<int> ParseLine(string line) {
 vector<vector<int>> ReadBoardFile(string path) {
   ifstream myfile(path);
   vector<vector<int>> board;
+  int count = 0;
   if (myfile) {
     string line;
     while (getline(myfile, line)) {
       vector<int> int_line = ParseLine(line);
       board.push_back(int_line);
+      for (int i =0; i< int_line.size();i++)
+      {
+        cout<<int_line[i];
+      }
+      cout<<"\n"<<count<<"\n";
+      count+=1;
     }
   }
-  
+  cout<<count<<std::endl;
   return board;
 }
 
@@ -45,6 +52,7 @@ void PrintBoard(const vector<vector<int>> board) {
 
 int main() {
   // Store the output of ReadBoardFile in the "board" variable.
-  vector<vector<int>> board = ReadBoardFile("/home/chandradeep_p/!!!!!!!!!!!!!!!!!!!!!!!!!/cpp-nanodegree/Board/files/1.board");
-  PrintBoard(board);
+  vector<vector<int>> board = ReadBoardFile("/home/chandradeep_p/!!!!!!!!!!!!!!!!!!!!!!!!!/cpp-nanodegree/C++ Foundations/files/1.board");
+  // PrintBoard(board);
+  cout<< board.size();
 }
