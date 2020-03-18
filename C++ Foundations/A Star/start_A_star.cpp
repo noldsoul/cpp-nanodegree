@@ -197,9 +197,9 @@ void PrintBoard(const std::vector<std::vector<State>> board)
 int main()
 {
     int init[2]{0, 0};
-    int goal[2]{4, 5};
+    int goal[2]{0,5};
 
-    auto board = ReadBoardFile("/home/chandradeep_p/!!!!!!!!!!!!!!!!!!!!!!!!!/cpp-nanodegree/C++ Foundations/files/1.board");
+    auto board = ReadBoardFile("/home/chandradeep_p/!!!!!!!!!!/cpp-nanodegree/C++ Foundations/files/1.board");
     auto solution = Search(board, init, goal);
     PrintBoard(solution);
 
